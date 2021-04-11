@@ -116,8 +116,8 @@ void Grid::update_field()
             node->vec = sf::Vector2f(min_neighbor->x, min_neighbor->y)
                 - sf::Vector2f(x, y);
             node->line[0] = sf::Vertex(sf::Vector2f(x * resolution, y * resolution));
-            node->line[1] = sf::Vertex(sf::Vector2f((x * resolution + node->vec.x) * (resolution - 4), 
-                        (y * resolution + node->vec.y) * (resolution - 4)));
+            node->line[1] = sf::Vertex(sf::Vector2f(x * resolution + node->vec.x * (resolution - 2),
+                            y * resolution + node->vec.y * (resolution - 2)));
         }
     }
 }
